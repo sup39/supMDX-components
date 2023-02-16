@@ -1,0 +1,48 @@
+{
+  "name": "@sup39/mdx-components",
+  "version": "0.1.0",
+  "author": "sup39 <dev@sup39.dev>",
+  "repository": "github.com:sup39/supMDX-components",
+  "description": "MDX utilitiy components for supMDX",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint --ext .ts --ext .tsx src/",
+    "pre-commit:add": "git add -u"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    },
+    "extends": [
+      "@sup39/typescript"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@sup39/eslint-config-typescript": "^0.1.5",
+    "@types/react": "^18.0.28",
+    "eslint": "^8.34.0",
+    "pre-commit": "^1.2.2",
+    "rollup": "^3.15.0",
+    "typescript": "^4.9.5"
+  },
+  "pre-commit": [
+    "lint",
+    "build",
+    "pre-commit:add"
+  ],
+  "peerDependencies": {
+    "react": "^18"
+  }
+}
